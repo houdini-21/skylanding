@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        space: "url('./images/bg.jpg')",
-        space1: "url('./images/bg2.jpg')",
-        space2: "url('./images/bg3.jpg')",
+        space1: "url('./images/container01.jpg')",
+        space2: "url('./images/container02.jpg')",
+        space3: "url('./images/container03.jpg')",
+        space4: "url('./images/container08.jpg')",
+        space5: "url('./images/container05.jpg')",
+        space6: "url('./images/container09.jpg')",
       },
       fontFamily: {
         'lato': ['"Lato"'],
