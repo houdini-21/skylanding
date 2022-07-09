@@ -3,12 +3,16 @@ import {
   RightParallax,
   CenterParallax,
 } from "./components/Parallax";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
   return (
     <>
-      <CenterParallax text="DESIGNING HUMANITY'S FUTURE INTERPLANETARY LIVING STRUCTURES" bg="bg-space5"/>
+      <CenterParallax
+        text="DESIGNING HUMANITY'S FUTURE INTERPLANETARY LIVING STRUCTURES"
+        bg="bg-space5"
+      />
       <RightParallax
         text="We are a space architecture and engineering company. Our team of professional designers and engineers utilize our patented technology to build humanity's future interplanetary living"
         title="OUR MISSION"
@@ -34,6 +38,8 @@ const App = () => {
         title="SPACE RESOURCES"
         bg="bg-space6"
       />
+
+      <Footer />
     </>
   );
 };
