@@ -1,18 +1,33 @@
-import {
-  LeftParallax,
-  RightParallax,
-  CenterParallax,
-} from "./components/Parallax";
-import Footer from "./components/Footer";
+import { LeftParallax, RightParallax } from "./components/Parallax";
 import "./App.css";
 
 const App = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    const location = document.querySelector("footer").offsetTop;
+
+    window.scrollTo({
+      left: 0,
+      top: location - 64,
+    });
+  };
   return (
     <>
-      <CenterParallax
-        text="DESIGNING HUMANITY'S FUTURE INTERPLANETARY LIVING STRUCTURES"
-        bg="bg-space5"
-      />
+      <div
+        className={`w-full h-screen bg-red-800 flex items-center justify-center px-3 bg-space5 bg-cover bg-center bg-fixed flex flex-col`}
+      >
+        <h2 className="text-xl font-light text-center text-gray-100 lg:text-3xl">
+          DESIGNING HUMANITY'S FUTURE INTERPLANETARY LIVING STRUCTURES
+        </h2>
+
+        <button
+          type="submit"
+          className="w-6/12 px-4 py-2 mt-5 mb-5 font-bold text-center text-white bg-transparent border-2 border-white rounded lg:w-2/12 hover:bg-white hover:text-slate-700 transition ease-in-out duration-500 focus:bg-white focus:text-slate-700"
+          onClick={handleClick}
+        >
+          Contact Us
+        </button>
+      </div>
       <RightParallax
         text="We are a space architecture and engineering company. Our team of professional designers and engineers utilize our patented technology to build humanity's future interplanetary living"
         title="OUR MISSION"
@@ -39,7 +54,123 @@ const App = () => {
         bg="bg-space6"
       />
 
-      <Footer />
+      <footer className="w-full bg-slate-700" id="footer">
+        <div className="flex flex-col items-center justify-center w-full py-12 lg:flex-row">
+          <div className="flex flex-col items-center w-full h-40 lg:w-1/2 lg:h-52">
+            <h2 className="mb-3 text-2xl font-light text-gray-100 underline lg:text-4xl">
+              CONTACT US
+            </h2>
+            <p className="text-xl font-medium text-center text-gray-100 lg:text-justify lg:text-xl">
+              For more information about our services.
+            </p>
+          </div>
+          <div className="flex flex-col items-center w-full lg:w-1/2">
+            <div className="w-8/12 mb-5">
+              <label
+                htmlFor="name"
+                className="inline-block mb-2 text-white form-label"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                className="
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-transparent bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+                id="name"
+                placeholder=""
+              />
+            </div>
+            <div className="w-8/12 mb-5">
+              <label
+                htmlFor="email"
+                className="inline-block mb-2 text-white form-label"
+              >
+                Email
+              </label>
+              <input
+                type="text"
+                className="
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-transparent bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+                id="email"
+                placeholder=""
+              />
+            </div>
+            <div className="w-8/12 mb-3">
+              <label
+                htmlFor="name"
+                className="inline-block mb-2 text-white form-label"
+              >
+                Name
+              </label>
+              <textarea
+                type="text"
+                rows="8"
+                cols="50"
+                className="
+        form-control
+        block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-transparent bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+                id="name"
+                placeholder=""
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="w-8/12 px-4 py-2 mt-5 mb-5 font-bold text-center text-white bg-transparent border-2 border-white rounded hover:bg-white hover:text-slate-700 transition ease-in-out duration-500 focus:bg-white focus:text-slate-700"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <div className="flex items-center justify-center w-full h-32 bg-slate-800 lg:justify-start lg:px-40">
+          <p className="text-base text-center text-white">
+            Copyright © 2022 Skyeports. All rights reserved
+          </p>
+        </div>
+      </footer>
     </>
   );
 };
