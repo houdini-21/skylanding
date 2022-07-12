@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <div
-        className={`w-full h-screen bg-red-800 flex items-center justify-center px-3 bg-space5 bg-cover bg-center bg-fixed flex flex-col`}
+        className={`w-full h-screen flex items-center justify-center px-3 bg-space5 bg-cover bg-center lg:bg-fixed flex flex-col`}
       >
         <h2 className="text-xl font-light text-center text-gray-100 lg:text-3xl">
           DESIGNING HUMANITY'S FUTURE INTERPLANETARY LIVING STRUCTURES
